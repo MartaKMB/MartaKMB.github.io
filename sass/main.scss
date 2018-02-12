@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC');
+$underconstruction_font: 'Amatic SC',
+cursive;
+$hover_color: #d9ac26;
+
+/* --- */
+
 * {
     margin: 0;
     padding: 0;
@@ -7,36 +14,97 @@
 body {
     width: 100vw;
     height: 100vh;
+    font-family: $underconstruction_font;
 }
 
 a {
     text-decoration: none;
     color: inherit;
-    
-    &:hover, &:active {
+
+    &:hover,
+    &:active {
         color: inherit;
     }
 }
 
-@import url('https://fonts.googleapis.com/css?family=Amatic+SC');
-$underconstruction_font: 'Amatic SC', cursive;
-$hover_color: #d9ac26;
+.about_sect_invisible {
+    display: none;
+}
+
+/* --- */
 
 .page_container {
     width: 100%;
     height: 100%;
-    
+
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+.courses_sect {
+    width: 50vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: absolute;
+    top: 0;
+    left: calc(-50vw + 20px);
+
+    &:hover {
+        left: 0;
+        background-color: #000;
+        color: $hover_color;
+        transition: all 2s ease;
+    }
+    
+    .courses_title {
+        transform: rotate(-90deg);
+        height: auto;
+        width: 200px;
+        font-size: 40px;
+    }
+    
+    .courses_list {
+        width: 40vw;
+        height: 80vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        letter-spacing: 2px;
+        
+        dt {
+            font-weight: 700;
+            font-size: 24px;
+        }
+        
+        dd {
+            font-size: 18px;
+            color: #FFF;
+        }
+    }
+    
+    .arrow_courses {
+        width: 20px;
+        height: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        font-size: 50px;
+        font-weight: 700;
+    }
+}
+
+
 .underconstruction_sect {
     width: 70vw;
     height: 35vh;
-    font-family: $underconstruction_font;
     text-align: center;
-    
+
     .undercostruction_title {
         font-size: 92px;
         letter-spacing: 4px;
@@ -44,9 +112,9 @@ $hover_color: #d9ac26;
         margin: {
             top: 2px;
             bottom: 12px;
-        } 
+        }
     }
-    
+
     .contact_ad {
         font-style: normal;
         font-size: 64px;
@@ -56,12 +124,12 @@ $hover_color: #d9ac26;
             bottom: 8px;
         }
         word-wrap: break-word;
-        
+
         &:hover .hover_mail {
             color: $hover_color;
         }
     }
-    
+
     .icons_sect {
         font-size: 38px;
         padding: 4px;
@@ -69,19 +137,16 @@ $hover_color: #d9ac26;
             top: 18px;
             bottom: 2px;
         }
-        
+
         a {
             padding: {
                 left: 5px;
                 right: 5px;
-            } 
-            
+            }
+
             &:hover {
                 color: $hover_color;
             }
         }
     }
 }
-
-
-

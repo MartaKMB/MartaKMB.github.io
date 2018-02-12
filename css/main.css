@@ -1,14 +1,26 @@
 @import url("https://fonts.googleapis.com/css?family=Amatic+SC");
+/* --- */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
-body { width: 100vw; height: 100vh; }
+body { width: 100vw; height: 100vh; font-family: "Amatic SC", cursive; }
 
 a { text-decoration: none; color: inherit; }
 a:hover, a:active { color: inherit; }
 
+.about_sect_invisible { display: none; }
+
+/* --- */
 .page_container { width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; }
 
-.underconstruction_sect { width: 70vw; height: 35vh; font-family: "Amatic SC", cursive; text-align: center; }
+.courses_sect { width: 50vw; height: 100vh; display: flex; justify-content: space-between; align-items: center; position: absolute; top: 0; left: calc(-50vw + 20px); }
+.courses_sect:hover { left: 0; background-color: #000; color: #d9ac26; transition: all 2s ease; }
+.courses_sect .courses_title { transform: rotate(-90deg); height: auto; width: 200px; font-size: 40px; }
+.courses_sect .courses_list { width: 40vw; height: 80vh; display: flex; flex-direction: column; justify-content: space-around; align-items: center; letter-spacing: 2px; }
+.courses_sect .courses_list dt { font-weight: 700; font-size: 24px; }
+.courses_sect .courses_list dd { font-size: 18px; color: #FFF; }
+.courses_sect .arrow_courses { width: 20px; height: 100%; display: flex; justify-content: flex-end; align-items: center; font-size: 50px; font-weight: 700; }
+
+.underconstruction_sect { width: 70vw; height: 35vh; text-align: center; }
 .underconstruction_sect .undercostruction_title { font-size: 92px; letter-spacing: 4px; padding: 8px; margin-top: 2px; margin-bottom: 12px; }
 .underconstruction_sect .contact_ad { font-style: normal; font-size: 64px; padding: 6px; margin-top: 8px; margin-bottom: 8px; word-wrap: break-word; }
 .underconstruction_sect .contact_ad:hover .hover_mail { color: #d9ac26; }
