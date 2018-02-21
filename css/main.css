@@ -26,8 +26,8 @@ a:hover, a:active { color: inherit; }
 .websites_sect .websites_list { width: 100%; display: flex; justify-content: space-around; align-items: center; letter-spacing: 2px; text-align: center; flex-wrap: wrap; color: #fff; }
 .websites_sect .websites_list div { width: 45%; font-size: 18px; }
 .websites_sect .websites_list div a { display: block; width: 100%; height: 300px; margin: 10px; background-position: center; background-size: cover; background-color: rgba(250, 250, 250, 0.2); background-blend-mode: overlay; }
-.websites_sect .websites_list div a.gasa_link { background-image: url("../image/websites_ksiazka-gasa.png"); }
-.websites_sect .websites_list div a.hovawart_link { background-image: url("../image/websites_hovawart.png"); }
+.websites_sect .websites_list div a.gasa_link { background-image: url(../image/websites_ksiazka-gasa.png); }
+.websites_sect .websites_list div a.hovawart_link { background-image: url(../image/websites_hovawart.png); }
 .websites_sect .websites_list div a:hover { background-blend-mode: normal; transition: all 2s ease; }
 .websites_sect .arrow_websites { width: 100%; height: 20px; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; font-size: 50px; font-weight: 700; transform: rotate(90deg); }
 
