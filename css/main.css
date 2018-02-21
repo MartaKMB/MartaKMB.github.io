@@ -2,7 +2,7 @@
 /* --- */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
-body { width: 100vw; height: 100vh; font-family: "Amatic SC", cursive; }
+body { width: 100vw; height: 100vh; font-family: "Amatic SC", cursive; overflow: hidden; }
 
 a { text-decoration: none; color: inherit; }
 a:hover, a:active { color: inherit; }
@@ -25,18 +25,30 @@ a:hover, a:active { color: inherit; }
 .websites_sect .websites_title { font-size: 30px; width: 100%; text-align: center; margin: 20px; }
 .websites_sect .websites_list { width: 100%; display: flex; justify-content: space-around; align-items: center; letter-spacing: 2px; text-align: center; flex-wrap: wrap; color: #fff; }
 .websites_sect .websites_list div { width: 45%; font-size: 18px; }
-.websites_sect .websites_list div a { display: block; width: 100%; height: 300px; margin: 10px; background-position: center; background-size: cover; background-color: rgba(250, 250, 250, 0.2); background-blend-mode: overlay; }
+.websites_sect .websites_list div a { display: block; width: 100%; height: 300px; margin: 10px; background-position: center; background-size: cover; background-color: rgba(250, 250, 250, 0.2); background-blend-mode: overlay; border-radius: 2px; }
 .websites_sect .websites_list div a.gasa_link { background-image: url("../image/websites_ksiazka-gasa.png"); }
 .websites_sect .websites_list div a.hovawart_link { background-image: url("../image/websites_hovawart.png"); }
-.websites_sect .websites_list div a:hover { background-blend-mode: normal; transition: all 2s ease; }
+.websites_sect .websites_list div a:hover { background-blend-mode: normal; height: 302px; transition: all 1s ease; }
 .websites_sect .arrow_websites { width: 100%; height: 20px; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; font-size: 50px; font-weight: 700; transform: rotate(90deg); }
 
-.underconstruction_sect { width: 70vw; height: 35vh; text-align: center; }
-.underconstruction_sect .undercostruction_title { font-size: 92px; letter-spacing: 4px; padding: 8px; margin-top: 2px; margin-bottom: 12px; }
-.underconstruction_sect .contact_ad { font-style: normal; font-size: 64px; padding: 6px; margin-top: 8px; margin-bottom: 8px; word-wrap: break-word; }
-.underconstruction_sect .contact_ad:hover .hover_mail { color: #d9ac26; }
-.underconstruction_sect .icons_sect { font-size: 38px; padding: 4px; margin-top: 18px; margin-bottom: 2px; }
-.underconstruction_sect .icons_sect a { padding-left: 5px; padding-right: 5px; }
-.underconstruction_sect .icons_sect a:hover { color: #d9ac26; }
+.app_sect { width: 75vw; height: 100%; display: flex; justify-content: space-between; align-items: center; position: absolute; right: calc(-75vw + 20px); top: 0; }
+.app_sect:hover { right: 0; background-color: #000; color: #d9ac26; transition: all 2s ease; }
+.app_sect .app_title { font-size: 30px; text-align: center; margin: 20px; transform: rotate(90deg); }
+.app_sect .app_list { display: flex; justify-content: space-around; align-items: center; letter-spacing: 2px; text-align: center; flex-wrap: wrap; color: #fff; }
+.app_sect .app_list div { width: 80%; font-size: 18px; }
+.app_sect .app_list div a { display: block; width: 100%; height: 250px; margin: 10px; background-position: center; background-size: cover; background-color: rgba(250, 250, 250, 0.2); background-blend-mode: overlay; border-radius: 2px; }
+.app_sect .app_list div a.dice_link { background-image: url("../image/app_gra-kosci.png"); }
+.app_sect .app_list div a.bitcoin_link { background-image: url("../image/app_bitcoin.png"); background-position: top; }
+.app_sect .app_list div a:hover { background-blend-mode: normal; height: 252px; transition: all 1s ease; }
+.app_sect .arrow_app { width: 20px; height: 100%; display: flex; justify-content: flex-start; align-items: center; font-size: 50px; font-weight: 700; }
+
+.front_sect { width: 70vw; height: 35vh; text-align: center; }
+.front_sect .front_title { font-size: 92px; letter-spacing: 4px; padding: 4px; margin: 2px; }
+.front_sect .front_2nd-title { color: #d9ac26; }
+.front_sect .contact_ad { font-style: normal; font-size: 64px; padding: 6px; margin-top: 8px; margin-bottom: 8px; word-wrap: break-word; }
+.front_sect .contact_ad:hover .hover_mail { color: #d9ac26; }
+.front_sect .icons_sect { font-size: 38px; padding: 4px; margin-top: 18px; margin-bottom: 2px; }
+.front_sect .icons_sect a { padding-left: 5px; padding-right: 5px; }
+.front_sect .icons_sect a:hover { color: #d9ac26; }
 
 /*# sourceMappingURL=main.css.map */

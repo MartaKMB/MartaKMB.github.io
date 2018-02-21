@@ -14,6 +14,7 @@ body {
     width: 100vw;
     height: 100vh;
     font-family: $underconstruction_font;
+    overflow: hidden;
 }
 
 a {
@@ -147,6 +148,7 @@ a {
                 background-size: cover;
                 background-color: rgba(250, 250, 250, .2);
                 background-blend-mode: overlay;
+                border-radius: 2px;
 
                 &.gasa_link {
                     background-image: url('../image/websites_ksiazka-gasa.png');
@@ -158,7 +160,8 @@ a {
                 
                 &:hover {
                     background-blend-mode: normal;
-                    transition: all 2s ease;
+                    height: 302px;
+                    transition: all 1s ease;
                 }
             }
         }
@@ -177,19 +180,97 @@ a {
     }
 }
 
-.underconstruction_sect {
+.app_sect {
+    width: 75vw;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    right: calc(-75vw + 20px);
+    top: 0;
+
+    &:hover {
+        right: 0;
+        background-color: #000;
+        color: $hover_color;
+        transition: all 2s ease;
+    }
+
+    .app_title {
+        font-size: 30px;
+        text-align: center;
+        margin: 20px;
+        transform: rotate(90deg);
+    }
+
+    .app_list {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        letter-spacing: 2px;
+        text-align: center;
+        flex-wrap: wrap;
+        color: #fff;
+
+        div {
+            width: 80%;
+            font-size: 18px;
+
+            a {
+                display: block;
+                width: 100%;
+                height: 250px;
+                margin: 10px;
+                background-position: center;
+                background-size: cover;
+                background-color: rgba(250, 250, 250, .2);
+                background-blend-mode: overlay;
+                border-radius: 2px;
+
+                &.dice_link {
+                    background-image: url('../image/app_gra-kosci.png');
+                }
+
+                &.bitcoin_link {
+                    background-image: url('../image/app_bitcoin.png');
+                    background-position: top;
+                }
+                
+                &:hover {
+                    background-blend-mode: normal;
+                    height: 252px;
+                    transition: all 1s ease;
+                }
+            }
+        }
+    }
+
+    .arrow_app {
+        width: 20px;
+        height: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        font-size: 50px;
+        font-weight: 700;
+    }
+}
+
+.front_sect {
     width: 70vw;
     height: 35vh;
     text-align: center;
 
-    .undercostruction_title {
+    .front_title {
         font-size: 92px;
         letter-spacing: 4px;
-        padding: 8px;
-        margin: {
-            top: 2px;
-            bottom: 12px;
-        }
+        padding: 4px;
+        margin: 2px;
+    }
+    
+    .front_2nd-title {
+        color: $hover_color;
     }
 
     .contact_ad {
