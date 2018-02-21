@@ -10,15 +10,26 @@ a:hover, a:active { color: inherit; }
 .about_sect_invisible { display: none; }
 
 /* --- */
-.page_container { width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; }
+.page_container { width: 100vw; height: 100vh; overflow: hidden; display: flex; justify-content: center; align-items: center; }
 
-.courses_sect { width: 50vw; height: 100vh; display: flex; justify-content: space-between; align-items: center; position: absolute; top: 0; left: calc(-50vw + 20px); }
+.courses_sect { width: 75vw; height: 100%; display: flex; justify-content: space-between; align-items: center; position: absolute; top: 0; left: calc(-75vw + 20px); }
 .courses_sect:hover { left: 0; background-color: #000; color: #d9ac26; transition: all 2s ease; }
-.courses_sect .courses_title { transform: rotate(-90deg); height: auto; width: 200px; font-size: 40px; }
-.courses_sect .courses_list { width: 40vw; height: 80vh; display: flex; flex-direction: column; justify-content: space-around; align-items: center; letter-spacing: 2px; }
+.courses_sect .courses_title { transform: rotate(-90deg); height: auto; width: 200px; font-size: 30px; }
+.courses_sect .courses_list { width: 50vw; height: 80vh; display: flex; flex-direction: column; justify-content: space-around; align-items: center; letter-spacing: 2px; text-align: center; }
 .courses_sect .courses_list dt { font-weight: 700; font-size: 24px; }
 .courses_sect .courses_list dd { font-size: 18px; color: #FFF; }
 .courses_sect .arrow_courses { width: 20px; height: 100%; display: flex; justify-content: flex-end; align-items: center; font-size: 50px; font-weight: 700; }
+
+.websites_sect { width: 100%; height: 75vh; display: flex; justify-content: space-between; align-items: center; flex-direction: column; position: absolute; top: calc(-75vh + 20px); left: 0; }
+.websites_sect:hover { top: 0; background-color: #000; color: #d9ac26; transition: all 2s ease; }
+.websites_sect .websites_title { font-size: 30px; width: 100%; text-align: center; margin: 20px; }
+.websites_sect .websites_list { width: 100%; display: flex; justify-content: space-around; align-items: center; letter-spacing: 2px; text-align: center; flex-wrap: wrap; color: #fff; }
+.websites_sect .websites_list div { width: 45%; font-size: 18px; }
+.websites_sect .websites_list div a { display: block; width: 100%; height: 300px; margin: 10px; background-position: center; background-size: cover; background-color: rgba(250, 250, 250, 0.2); background-blend-mode: overlay; }
+.websites_sect .websites_list div a.gasa_link { background-image: url("../image/websites_ksiazka-gasa.png"); }
+.websites_sect .websites_list div a.hovawart_link { background-image: url("../image/websites_hovawart.png"); }
+.websites_sect .websites_list div a:hover { background-blend-mode: normal; transition: all 2s ease; }
+.websites_sect .arrow_websites { width: 100%; height: 20px; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; font-size: 50px; font-weight: 700; transform: rotate(90deg); }
 
 .underconstruction_sect { width: 70vw; height: 35vh; text-align: center; }
 .underconstruction_sect .undercostruction_title { font-size: 92px; letter-spacing: 4px; padding: 8px; margin-top: 2px; margin-bottom: 12px; }
