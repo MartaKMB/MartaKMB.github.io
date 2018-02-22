@@ -27,7 +27,7 @@ a:hover, a:active { color: inherit; }
 .websites_sect .websites_list div a:hover { background-blend-mode: normal; height: 300.5px; transition: all 1s ease; }
 .websites_sect .arrow_websites { display: flex; justify-content: flex-end; align-items: center; font-size: 70px; font-weight: 700; width: 100%; height: 22px; flex-direction: column; transform: rotate(90deg); }
 
-.app_sect { /* work in progress */ width: 75vw; height: 100vh; display: flex; flex-direction: row-reverse; justify-content: space-between; align-items: center; position: absolute; top: 0; right: -120vw; }
+.app_sect { /* work in progress */ width: 75vw; height: 100vh; display: flex; flex-direction: row-reverse; justify-content: space-between; align-items: center; position: absolute; top: 0; right: calc(-75vw + 22px); }
 .app_sect:hover { top: 0; right: 0; background-color: #000; color: #d9ac26; transition: all 2s ease; }
 .app_sect .app_title { font-size: 50px; text-align: center; margin: 20px; transform: rotate(90deg); }
 .app_sect .app_list { display: flex; flex-direction: column; justify-content: space-around; align-items: center; letter-spacing: 2px; text-align: center; color: #fff; height: 100%; }
@@ -54,7 +54,7 @@ a:hover, a:active { color: inherit; }
   .websites_sect .websites_list div { width: 45%; font-size: 18px; }
   .websites_sect .websites_list div a { height: 300px; }
   .websites_sect .arrow_websites { display: flex; justify-content: flex-end; align-items: center; font-size: 70px; font-weight: 700; width: 100%; height: 22px; flex-direction: column; transform: rotate(90deg); }
-  .app_sect { /* work in progress */ right: calc(-75vw + 22px); }
+  .app_sect { /* work in progress */ }
   .front_sect { width: 100vw; height: 100vh; display: flex; justify-content: center; align-items: center; }
   .front_sect .icons_sect { font-size: 38px; padding: 4px; }
   .front_sect .icons_sect a { padding-left: 5px; padding-right: 5px; } }
