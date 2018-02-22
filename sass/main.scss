@@ -1,36 +1,10 @@
+/* --- helpers --- */
+
 @import url('https://fonts.googleapis.com/css?family=Amatic+SC');
-$underconstruction_font: 'Amatic SC', cursive;
+$main_font: 'Amatic SC', cursive;
 $hover_color: #d9ac26;
 
-@mixin title {
-    font-size: 50px;
-    text-align: center;
-    margin: 20px;
-}
-
-@mixin title-small {
-    font-size: 40px;
-    margin: 2px;
-}
-
-@mixin list($direction) {
-    display: flex;
-    flex-direction: $direction;
-    justify-content: space-around;
-    align-items: center;
-    letter-spacing: 2px;
-    text-align: center;
-}
-
-@mixin arrow {    
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    font-size: 70px;
-    font-weight: 700;
-}
-
-/* --- */
+/* --- clean --- */
 
 * {
     margin: 0;
@@ -41,7 +15,7 @@ $hover_color: #d9ac26;
 body {
     width: 100vw;
     height: 100vh;
-    font-family: $underconstruction_font;
+    font-family: $main_font;
     overflow: hidden;
 }
 
@@ -55,199 +29,7 @@ a {
     }
 }
 
-/* --- */
-
-.courses_sect {
-    width: 75vw;
-    height: 100vh;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    position: absolute;
-    top: 0;
-    left: calc(-75vw + 22px);
-
-    &:hover {
-        left: 0;
-        background-color: #000;
-        color: $hover_color;
-        transition: all 2s ease;
-    }
-
-    .courses_title {
-        transform: rotate(-90deg);
-        @include title-small;
-    }
-
-    .courses_list {
-        height: 80vh;
-        @include list(column);
-
-        dt {
-            font-weight: 700;
-            font-size: 24px;
-        }
-
-        dd {
-            font-size: 18px;
-            color: #FFF;
-        }
-    }
-
-    .arrow_courses {
-        
-        @include arrow;
-        width: 22px;
-        height: 100%;
-    }
-}
-
-.websites_sect {
-    width: 100%;
-    height: 75vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
-    position: absolute;
-    top: calc(-75vh + 22px);
-    left: 0;
-
-    &:hover {
-        top: 0;
-        background-color: #000;
-        color: $hover_color;
-        transition: all 2s ease;
-    }
-
-    .websites_title {
-        @include title-small;
-        width: 100%;
-        height: 10vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .websites_list {
-        @include list(column);
-        width: 100%;
-        color: #fff;
-
-        div {
-            width: 80%;
-            height: 40vh;
-            font-size: 28px;
-
-            a {
-                display: block;
-                width: 100%;
-                height: 350px;
-                margin: 10px;
-                background-position: center;
-                background-size: cover;
-                background-color: rgba(250, 250, 250, .2);
-                background-blend-mode: overlay;
-                border-radius: 2px;
-
-                &.gasa_link {
-                    background-image: url('../image/websites_ksiazka-gasa.png');
-                }
-
-                &.hovawart_link {
-                    background-image: url('../image/websites_hovawart.png');
-                }
-                
-                &:hover {
-                    background-blend-mode: normal;
-                    height: 300.5px;
-                    transition: all 1s ease;
-                }
-            }
-        }
-    }
-
-    .arrow_websites {
-        @include arrow;
-        width: 100%;
-        height: 22px;
-        flex-direction: column;
-        transform: rotate(90deg);
-    }
-}
-
-.app_sect {
-    /* work in progress */
-//    display: none;
-    width: 75vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-    align-items: center;
-    position: absolute;
-    top: 0;
-    right: calc(-75vw + 22px);
-    
-    &:hover {
-        top: 0;
-        right: 0;
-        background-color: #000;
-        color: $hover_color;
-        transition: all 2s ease;
-    }
-
-    .app_title {
-        @include title;
-        transform: rotate(90deg);
-    }
-
-    .app_list {
-        @include list(column);
-        color: #fff;
-        height: 100%;
-
-        div {
-            width: 80%;
-            font-size: 18px;
-
-            a {
-                display: block;
-                width: 100%;
-                height: 250px;
-                margin: 10px;
-                background-position: center;
-                background-size: cover;
-                background-color: rgba(250, 250, 250, .2);
-                background-blend-mode: overlay;
-                border-radius: 2px;
-
-                &.dice_link {
-                    background-image: url('../image/app_gra-kosci.png');
-                }
-
-                &.bitcoin_link {
-                    background-image: url('../image/app_bitcoin.png');
-                    background-position: top;
-                }
-                
-                &:hover {
-                    background-blend-mode: normal;
-                    height: 250.5px;
-                    transition: all 1s ease;
-                }
-            }
-        }
-    }
-
-    .arrow_app {
-        @include arrow;
-        width: 22px;
-        height: 100%;
-    }
-}
+/* --- mobile first --- */
 
 .front_sect {
     width: 100vw;
@@ -257,10 +39,12 @@ a {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    text-align: center;
     align-items: center;
-
+    
     .front_title {
-        font-size: 92px;
+        font-size: 58px;
+        width: 200px;
         letter-spacing: 4px;
         padding: 4px;
         margin: 2px;
@@ -268,11 +52,12 @@ a {
     
     .front_2nd-title {
         color: $hover_color;
+        margin-top: 8px;
     }
 
     .contact_ad {
         font-style: normal;
-        font-size: 64px;
+        font-size: 30px;
         padding: 6px;
         margin: {
             top: 8px;
@@ -286,7 +71,7 @@ a {
     }
 
     .icons_sect {
-        font-size: 60px;
+        font-size: 38px;
         padding: 4px;
         margin: {
             top: 18px;
@@ -295,8 +80,8 @@ a {
 
         a {
             padding: {
-                left: 12px;
-                right: 12px;
+                left: 5px;
+                right: 5px;
             }
 
             &:hover {
@@ -306,66 +91,27 @@ a {
     }
 }
 
-/* --- */
+/* --- media queries --- */
 
-@media (min-width: 530px) and (orientation: landscape) {
-    .courses_sect {
-        .courses_title {
-            transform: rotate(-90deg);
-            @include title;
-        }
-    }
-
-    .websites_sect {
-        .websites_title {
-            @include title;
-            width: 100%;
-        }
-
-        .websites_list {
-            @include list(row);
-            
-            div {
-                width: 45%;
-                font-size: 18px;
-
-                a {
-                    height: 300px;
-                }
-            }
-        }
-
-        .arrow_websites {
-            @include arrow;
-            width: 100%;
-            height: 22px;
-            flex-direction: column;
-            transform: rotate(90deg);
-        }
-    }
-
-    .app_sect {
-        /* work in progress */
-    }
-
+@media (orientation: landscape) {
     .front_sect {
-        width: 100vw;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        .front_title {
+            font-size: 44px;
+            width: 100%;
+        }
+        .contact_ad {
+            font-size: 30px;
+        }
+    }  
+}
 
-        .icons_sect {
-            font-size: 38px;
-            padding: 4px;
-
-            a {
-                padding: {
-                    left: 5px;
-                    right: 5px;
-                }
-            }
+@media (min-width: 768px) {    
+    .front_sect {
+        .front_title {
+            font-size: 92px;
+        }
+        .contact_ad {
+            font-size: 64px;
         }
     }
-
 }
